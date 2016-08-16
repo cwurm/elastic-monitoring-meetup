@@ -60,7 +60,7 @@ packetbeat.flows:
 
 packetbeat.protocols.icmp:
   # Enable ICMPv4 and ICMPv6 monitoring. Default: true
-  #enabled: true
+  enabled: false
 
 packetbeat.protocols.amqp:
   # Enable AMQP monitoring. Default: true
@@ -101,7 +101,7 @@ packetbeat.protocols.amqp:
 
 packetbeat.protocols.dns:
   # Enable DNS monitoring. Default: true
-  #enabled: true
+  enabled: false
 
   # Configure the ports where to listen for DNS traffic. You can disable
   # the DNS protocol by commenting out the list of ports.
