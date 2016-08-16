@@ -21,7 +21,9 @@ On non-Mac platforms libpcap has to be installed before. Instructions here: http
     tar xzvf packetbeat-5.0.0-alpha5-darwin-x86_64.tar.gz
 
 # Install
-### X-Pack (commercial, 30 day trial)
+### X-Pack
+X-Pack requires a basic (free) or commercial (paid) license. A 30 day trial license is included.
+
     elasticsearch-5.0.0-alpha5/bin/elasticsearch-plugin install x-pack
 
     kibana-5.0.0-alpha5-darwin-x86_64/bin/kibana-plugin install x-pack
