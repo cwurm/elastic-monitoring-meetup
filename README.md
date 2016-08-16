@@ -58,7 +58,7 @@ A problem with the new Netty4 module in alpha5 requires switching back to Netty3
 # View dashboards in Kibana
 Go to http://localhost:5601/, log in with `elastic / changeme` (yes, you should change it ;-)).
 
-Select one of the existing index patterns as the default (patterns are listed in top left corner, it doesn't matter which one you select).
+Select one of the existing index patterns as the defauls: `packetbeat-*` and `metricbeat-*` should be listed in top left corner, select one and then click the star icon.
 
 Go to Dashboards (left-hand navigation), click Open (top right) and select any.
 
