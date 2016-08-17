@@ -21,7 +21,7 @@ On non-Mac platforms libpcap has to be installed before. Instructions here: http
     tar xzvf packetbeat-5.0.0-alpha5-darwin-x86_64.tar.gz
 
 # Install
-### X-Pack
+### X-Pack (optional)
 X-Pack requires a basic (free) or commercial (paid) license. A 30 day trial license is included.
 
     elasticsearch-5.0.0-alpha5/bin/elasticsearch-plugin install x-pack
@@ -47,22 +47,21 @@ A problem with the new Netty4 module in alpha5 requires switching back to Netty3
     sudo metricbeat-5.0.0-alpha5-darwin-x86_64/metricbeat -e -c metricbeat.full.yml - d "publish"
     
 # Load dashboards
-`cd` is necessary.
     
-    cd packetbeat-5.0.0-alpha5-darwin-x86_64/kibana
-    ./import_dashboards.sh -u elastic:changeme
-    cd -
+    ./import_dashboards.sh -d packetbeat-5.0.0-alpha5-darwin-x86_64/kibana -u elastic:changeme 
     
-    cd metricbeat-5.0.0-alpha5-darwin-x86_64/kibana
-    ./import_dashboards.sh -u elastic:changeme
-    cd -
+    ./import_dashboards.sh -d metricbeat-5.0.0-alpha5-darwin-x86_64/kibana -u elastic:changeme
     
 # View dashboards in Kibana
-Go to http://localhost:5601/, log in with `elastic / changeme` (yes, you should change it ;-)).
+Go to [http://localhost:5601/](http://localhost:5601/), log in with `elastic / changeme` (yes, you should change it ;-)).
 
 Select one of the existing index patterns as the defauls: `packetbeat-*` and `metricbeat-*` should be listed in top left corner, select one and then click the star icon.
 
 Go to Dashboards (left-hand navigation), click Open (top right) and select any.
+
+Examples of interesting dashboards:
+- Metricbeat - Processes with CPU and memory usage: [http://localhost:5601/app/kibana#/dashboard/Metricbeat-processes](http://localhost:5601/app/kibana#/dashboard/Metricbeat-processes)
+- Packetbeat - HTTP requests and error codes: [http://localhost:5601/app/kibana#/dashboard/Packetbeat-HTTP](http://localhost:5601/app/kibana#/dashboard/Metricbeat-processes)
 
 
 
